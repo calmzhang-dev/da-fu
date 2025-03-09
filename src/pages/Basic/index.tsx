@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./index.module.less";
 import { Layout, Pagination } from "@douyinfe/semi-ui";
 import logoImg from "../../assets/zlogo.png";
@@ -11,6 +11,9 @@ const Basic: React.FC = () => {
   const num = Number(loc.search.split("?")[1]) + 1
   const pageSize = 6
   const [page, setPage] = useState(1)
+
+  console.log(num);
+
 
   const list25 = [
     "第1号答复—《关于要求对双溪水库进行清理》",
@@ -429,6 +432,24 @@ const Basic: React.FC = () => {
   const list30 = [
     "第130号答复—《关于要求对叶天底故居及周边环境进行整理、整治的建议》",
   ]
+
+  const list31 = [
+    "第1号答复—改造罗岩-东门道路",
+    "第2号答复—实施水闸桥修复工程",
+    "第3号答复—改善三溪港口至大普路面情况",
+    "第4号答复—改善祝家庄前龚至贾塔道路",
+    "第5号答复—在永庆城里片弄堂内安装路灯",
+    "第6号答复—修补谢桥小学通往安家渡桥路",
+    "第7号答复—实施虞光村基本农田机耕路提升修复工程",
+    "第8号答复—改善潮河两岸综合环境",
+    "第9号答复—盛茂村农田设施进行立项改造",
+    "第10号答复—改造修复南门村东河南岸到至沙滩桥河堤",
+    "第11号答复—修复三溪陶朱庙至大港坝闸",
+    "第12号答复—修复渔门村金家自然村河堤机耕路",
+    "第13号答复—在集镇周边开设老年大学或是开通老年大学公交班次",
+    "第14号答复—把工业污水管道从谢桥延长到夹塘工业集聚点"
+  ]
+
   const lista = {
     list1,
     list2,
@@ -460,6 +481,7 @@ const Basic: React.FC = () => {
     list29,
     list30,
     list20,
+    list31,
   } as any
 
   const list = lista[`list${num}`]
